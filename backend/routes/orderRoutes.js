@@ -3,7 +3,7 @@ import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 import User from "../models/userModel.js";
 import Product from "../models/productModel.js";
-import { isAuth, isAdmin, mailgun, payOrderEmailTemplate } from "../utils.js";
+import { isAuth, isAdmin } from "../utils.js";
 
 const orderRouter = express.Router();
 
@@ -138,23 +138,23 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
-      mailgun()
-        .messages()
-        .send(
-          {
-            from: "Small Shop <SmallShopa@gmail.com>",
-            to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
-            html: payOrderEmailTemplate(order),
-          },
-          (error, body) => {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log(body);
-            }
-          }
-        );
+      // mailgun()
+      //   .messages()
+      //   .send(
+      //     {
+      //       from: "Small Shop <SmallShopa@gmail.com>",
+      //       to: `${order.user.name} <${order.user.email}>`,
+      //       subject: `New order ${order._id}`,
+      //       html: payOrderEmailTemplate(order),
+      //     },
+      //     (error, body) => {
+      //       if (error) {
+      //         console.log(error);
+      //       } else {
+      //         console.log(body);
+      //       }
+      //     }
+      //   );
 
       res.send({ message: "Order Paid", order: updatedOrder });
     } else {
