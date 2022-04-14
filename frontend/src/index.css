@@ -1,3 +1,6 @@
+:root {
+  --bs-blue: #006d77;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,9 +16,17 @@ main {
   flex: 1;
 }
 .btn-primary,
-.btn-outline-primary {
+.btn-outline-primary,
+.btn-dark {
   background-color: #c1e2df;
   color: #000000;
+  border: #006d77;
+}
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.btn-dark:hover {
+  background-color: #006d77;
+  color: #fff;
 }
 .products {
   display: flex;
@@ -66,7 +77,6 @@ main {
   height: 100%;
   position: absolute;
   left: -300px;
-  background-color: #100901;
   transition: 0.5s;
   color: #a0a0a0;
 }
@@ -83,6 +93,46 @@ main {
 .text-bold {
   font-weight: bold;
 }
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar div {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-light .navbar-brand {
+  align-self: end;
+  flex-grow: 1;
+  margin-left: 0.5rem;
+  color: #006d77;
+}
+
+a:link,
+a:visited {
+  display: inline-block;
+  color: #006d77;
+  text-decoration: none;
+
+  padding-bottom: 1px;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:active {
+  color: #000;
+}
+
+/* radio button */
+
+.form-check-input:checked {
+  background-color: #006d77;
+  border-color: #006d77;
+}
+
+/* #basic-navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+} */
 
 /* Map */
 

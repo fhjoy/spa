@@ -85,12 +85,12 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>Small Shop</Navbar.Brand>
+                <Navbar.Brand>SMALL SHOP</Navbar.Brand>
               </LinkContainer>
+
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
-                <Nav className=" me-auto  w-100  justify-content-end">
+                <Nav className="d-flex">
                   <Link to="/cart" className=" nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
@@ -137,6 +137,7 @@ function App() {
                       </LinkContainer>
                     </NavDropdown>
                   )}
+                  <SearchBox />
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -145,11 +146,11 @@ function App() {
         <div
           className={
             sidebarIsOpen
-              ? "active-nav side-navbar d-flex justify-content-between flex-wrap flex-column"
-              : "side-navbar d-flex justify-content-between flex-wrap flex-column"
+              ? "active-nav side-navbar d-flex justify-content-between flex-wrap flex-column bg-light"
+              : "side-navbar d-flex justify-content-between flex-wrap flex-column bg-light"
           }
         >
-          <Nav className="flex-column text-white w-100 p-2">
+          <Nav className="flex-column text-dark w-100 p-2">
             <Nav.Item>
               <strong>Categories</strong>
             </Nav.Item>
