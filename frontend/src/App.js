@@ -258,8 +258,15 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">All rights reserved</div>
+        <footer className="footer">
+          <div className="bottom-footer">
+            <div className="copyright">
+              <p className="text">
+                Copyright&copy; 2022 All rights reserved | Made by
+                <span> Faisal Hossain </span>
+              </p>
+            </div>
+          </div>
         </footer>
       </div>
     </BrowserRouter>

@@ -93,10 +93,7 @@ main {
 .navbar-collapse {
   flex-grow: 0;
 }
-/* .navbar div {
-  display: flex;
-  justify-content: space-between;
-} */
+
 .navbar-light .navbar-brand {
   align-self: end;
   flex-grow: 1;
@@ -124,4 +121,18 @@ a:active {
 .form-check-input:checked {
   background-color: #006d77;
   border-color: #006d77;
+}
+
+/* footer */
+.footer {
+  padding: 2rem 0;
+  background-color: #111;
+}
+.copyright .text {
+  color: #c1e2df;
+  text-align: center;
+}
+.copyright .text span {
+  color: #83c5be;
+  cursor: pointer;
 }

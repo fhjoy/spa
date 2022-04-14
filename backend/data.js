@@ -34,7 +34,7 @@ const data = {
       name: "Summer shirt",
       slug: "summer-shirt",
       category: "Shirts",
-      image: "/images/p2.jpg", // 679px × 829px
+      image: "/images/p2.jpg",
       price: 120,
       countInStock: 7,
       brand: "Nike",
@@ -47,7 +47,7 @@ const data = {
       name: "T-shirt",
       slug: "t-shirt",
       category: "Shirts",
-      image: "/images/p3.jpg", // 679px × 829px
+      image: "/images/p3.jpg",
       price: 120,
       countInStock: 10,
       brand: "Nike",
